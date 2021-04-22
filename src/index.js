@@ -75,6 +75,7 @@ var webfont = function(options, done) {
 	}
 
 	options.templateOptions = _.extend({}, DEFAULT_TEMPLATE_OPTIONS, options.templateOptions)
+	options.templateOptions.baseClass = options.templateOptions.baseSelector.replace(".", "")
 
 	// Generates codepoints starting from `options.startCodepoint`,
 	// skipping codepoints explicitly specified in `options.codepoints`
